@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
+      - name: ENV
+        run: echo $GITHUB_RUN_ID
       - name: Install serverless cli
         run: sudo npm i serverless -g
       - name: Deploy and invoke SCF
